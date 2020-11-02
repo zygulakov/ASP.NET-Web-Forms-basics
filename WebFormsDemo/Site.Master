@@ -1,0 +1,61 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeBehind="Site.Master.cs" Inherits="WebFormsDemo.Site" %>
+
+<!DOCTYPE html>
+
+<html lang="en">
+<head runat="server">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./Design/style.css" />
+    <title><%: Page.Title %></title>
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+        <header>
+            <div id="websiteName">
+                <h3>ASP.NET Web Forms Demo</h3>
+            </div>
+            <div id="userMessage">
+                    <h5 id="userMessageCorner" >place for message</h5>
+            </div>
+            <div id="userCredential">
+                <a href="Login.aspx">
+                    <asp:Label ID="userCorner" runat="server">Sign In</asp:Label>
+                </a>
+            </div>
+
+        </header>
+        <div>
+            <asp:ContentPlaceHolder ID="MainContent" runat="server">
+            </asp:ContentPlaceHolder>
+        </div>
+        <footer>
+            <div id="footerDiv">
+
+                <section class="footerItems">
+                    <a href="Default.aspx">
+                        <h4>Home</h4>
+                    </a>
+                </section>
+                
+                <section class="footerItems">
+                    <a href="Contact.aspx">
+                        <h4>Contact</h4>
+                    </a>
+                </section>
+                
+                <section class="footerItems">
+                    <a href="About.aspx">
+                        <h4>About</h4>
+                    </a>
+                </section>
+            </div>
+            
+        </footer>
+    </form>
+    <script src="Scripts/jquery-3.5.1.min.js"></script>
+    <script src="Scripts/script.js"></script>
+</body>
+</html>
